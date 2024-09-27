@@ -4,6 +4,9 @@ html{
 
 }
 
+title {
+    justify-text: center;
+}
 
 body {
     background-color: rgb(39, 39, 39);
