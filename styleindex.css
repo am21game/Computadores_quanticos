@@ -1,14 +1,12 @@
-html{
+html {
     scroll-behavior: smooth;
     font-family: "Signika Negative", sans-serif;
     width: 100vw;
-
 }
-
 
 body {
     background-color: rgb(39, 39, 39);
-    font-size: large;
+    font-size: 1.2rem; /* Usando rem para responsividade */
     text-align: justify;
     margin: 5%;
 }
@@ -20,17 +18,15 @@ body {
 
 #inicio2 {
     display: flex;
-    justify-content: space-between, space-around;
-    background-color:  rgb(68, 68, 68);
+    justify-content: space-between;
+    background-color: rgb(68, 68, 68);
     margin: 0;
     padding: 0;
     border-radius: 50%;
-
 }
 
 #intro {
     color: darkcyan;
-    
 }
 
 #problema {
@@ -57,45 +53,29 @@ a {
     scroll-behavior: smooth;
 }
 
-a ::after {
-    color: inherit;
-    text-decoration: none;
-}
-
-a :active {
-    color: inherit;
-    text-decoration: none;
-}
 nav a:hover {
     font-size: 110%;
     font-style: italic;
 }
 
-nav a:active {
-    color: inherit;
-}
-
 #int {
     color: darkcyan;
-    padding-right: 50%;
+    padding-right: 5%; /* Ajustado para melhor responsividade */
 }
 
-
-
-
 #prob {
-    color: rgb(207, 207, 207); 
-    padding-left: 50%;
+    color: rgb(207, 207, 207);
+    padding-left: 5%; /* Ajustado para melhor responsividade */
 }
 
 #resol {
     color: green;
-    padding-right: 50%;
+    padding-right: 5%; /* Ajustado para melhor responsividade */
 }
 
 #aplica {
     color: goldenrod;
-    padding-left: 50%;
+    padding-left: 5%; /* Ajustado para melhor responsividade */
 }
 
 footer {
@@ -106,25 +86,70 @@ footer {
     margin-right: 0%;
 }
 
-#livro {
+#livro, #footer_2, #footer_3 {
     color: aliceblue;
 }
 
-#footer_2 {
-    color: aliceblue;
-
-
-
+/* Imagem de fundo no #int com esbatimento */
+#int {
+    background: linear-gradient(rgba(39, 39, 39, 0.5), rgba(39, 39, 39, 0.5)), 
+              url(https://quantumai.google/static/site-assets/images/marketing/home/slide-1.png);
+    background-size: cover;
+    background-position: center;
 }
 
-#footer3 {
-    color: aliceblue
-
+/* Ajustes para imagens */
+#img2, #img3, #img4 {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
 }
 
-#img2 {
+/* Específico para o logo da escola */
+#logo_escola {
     position: absolute;
-    left: 70%;
-    top: 300%;
-    width: 30%;
+    width: 10%;
+    left: 80%;
+    margin-top: -10%;
+}
+
+/* Responsividade - Ajustes para telas menores (telefones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 4vw; /* Aumenta o tamanho da fonte para melhor leitura em telas pequenas */
+    }
+
+    #img2, #img3, #img4 {
+        width: 80%; /* Reduz o tamanho das imagens em dispositivos móveis */
+        margin: 10% auto; /* Centraliza as imagens */
+    }
+
+    #int, #prob, #resol, #aplica {
+        padding: 5%; /* Ajusta o padding para telas menores */
+    }
+
+    #inicio2 {
+        flex-direction: column; /* Muda a direção do flex para empilhar os itens verticalmente em telas pequenas */
+        align-items: center;
+    }
+
+    #logo_escola {
+        position: relative;
+        width: 30%; /* Ajusta o tamanho do logo da escola em dispositivos móveis */
+        margin-top: 0;
+        left: 50%; /* Centraliza o logo */
+        transform: translateX(-50%);
+    }
+}
+
+/* Para tablets e telas médias */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #img2, #img3, #img4 {
+        width: 60%; /* Ajusta as imagens para tablets */
+    }
+
+    #logo_escola {
+        width: 20%; /* Ajusta o tamanho do logo para tablets */
+    }
 }
