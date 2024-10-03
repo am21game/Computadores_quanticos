@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 #int {
-    color: darkcyan;
+    color: rgb(1, 182, 182);
     padding-right: 5%; /* Ajustado para melhor responsividade */
 }
 
@@ -92,7 +92,7 @@ footer {
 
 /* Imagem de fundo no #int com esbatimento */
 #int {
-    background: linear-gradient(rgba(39, 39, 39, 0.5), rgba(39, 39, 39, 0.5)), 
+    background: linear-gradient(rgba(39, 39, 39, 0.5), rgba(0, 0, 0, 0.5)), 
               url(https://quantumai.google/static/site-assets/images/marketing/home/slide-1.png);
     background-size: cover;
     background-position: center;

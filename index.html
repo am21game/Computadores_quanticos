@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
@@ -9,10 +8,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="icon" src="https://i.ibb.co/gvTXYhn/unnamed-1.png" type="image.png">
+    <link rel="icon" href="https://i.ibb.co/gvTXYhn/unnamed-1.png" type="image.png">
+    <style>
+        /* Estilos da tela de carregamento */
+        #loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Para alinhar a imagem verticalmente */
+        }
+
+        /* Animação do círculo giratório */
+        .spinner {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            margin-bottom: 20px; /* Espaço abaixo do círculo giratório */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+        #circle{
+            display: none;
+            width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+            /*display: none; /* Inicialmente oculta a imagem */
+
+
+        }
+
+        .spinner {
+         overflow: hidden;
+        }
+
+    </style>   
 </head>
 
 <body>
+
+    <!-- Tela de carregamento (loader) -->
+    <div id="loader">
+        <div class="spinner">
+            <img src="https://cdn-icons-png.flaticon.com/512/68/68858.png" id="circle">
+        </div>
+    </div>
+
     <h1 id="inicio"> Computadores Quânticos</h1>
     <nav id="inicio2">
         <h2 id="intro"><a href="#int" id="intro">Introdução</a></h2>
@@ -143,5 +197,20 @@
         </p>
         <img src="https://i.ibb.co/gvTXYhn/unnamed-1.png"  alt="Clara resende logo" id="logo_escola">
     </footer>
+
+    <script>
+        // JavaScript para ocultar o loader e exibir o conteúdo após 5 segundos
+        window.addEventListener('load', function () {
+            document.getElementById('circle').style.display = 'block'; // Exibe a imagem do círculo
+            document.body.classList.add('no-scroll'); // Adiciona a classe para desabilitar o scroll
+            setTimeout(function() {
+                document.getElementById('loader').style.display = 'none'; // Oculta o loader
+                document.body.classList.remove('no-scroll'); // Remove a classe para habilitar o scroll
+                document.body.style.display = 'block'; // Exibe o conteúdo da página
+            }, 5000); // 5 segundos
+        });
+    </script>
 </body>
+
+
     
